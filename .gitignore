@@ -1,3 +1,6 @@
+# Mac delete files
+DS_Store
+
 # Prerequisites
 *.d
 
