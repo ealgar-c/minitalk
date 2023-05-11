@@ -61,7 +61,7 @@ CC = gcc
 
 CFLAGS = -Wall -Werror -Wextra
 
-LIB = ar rc
+LIB = ar rcs
 
 all: $(NAME)
 

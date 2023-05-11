@@ -6,7 +6,7 @@
 /*   By: ealgar-c <ealgar-c@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 15:38:23 by ealgar-c          #+#    #+#             */
-/*   Updated: 2023/05/11 17:20:19 by ealgar-c         ###   ########.fr       */
+/*   Updated: 2023/05/11 21:51:40 by ealgar-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,7 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*s_copy;
-	size_t	i;
 
-	i = 0;
 	if (!s)
 		return (0);
 	if ((size_t)ft_strlen(s) < start)
