@@ -1,40 +1,36 @@
-CLIENT	=	client
-SERVER	=	server
+NAME_C = client
+NAME_S = server
+CC = cc
+FLAGS = -Wall -Wextra -Werror
+SRC_S = server.c
+OBJ_S = $(SRC_S:.c=.o)
+SRC_C = client.c
+OBJ_C = $(SRC_C:.c=.o)
+RM = rm -f
 
-#ft_printf Variables:
-LIBFT	=	libft/libft.a
-LIBFT_DIR	=	libft
+all: client server
 
-#minitalk variables
-SRC_C	=	client.c
-SRC_S	=	server.c
-OBJ_S	=	server.o
-OBJ_C	=	client.o
+server: libft $(OBJ_S)
+	$(CC) $(FLAGS) -o $(NAME_S) $(OBJ_S) libft/*.o
 
-#Compiling Variables:
-CC			=	gcc
-CFLAG		=	-Wall -Wextra -Werror
-RM			=	rm -rf
+client: libft $(OBJ_C)
+	$(CC) $(FLAGS) -o $(NAME_C) $(OBJ_C) libft/*.o
 
-all: $(CLIENT) $(SERVER)
-$(SERVER): $(OBJ_S)
-	@ ar rcs $(SERVER) $(OBJ_S)
-$(OBJ_S): $(SRC_S)
-	@ $(CC) $(CFLAGS) -c $(SRC_S)
+libft:
+	make -C libft/
 
-$(CLIENT): $(OBJ_C)
-	@ ar rcs $(CLIENT) $(OBJ_C)
-$(OBJ_C): $(SRC_C)
-	@ $(CC) $(CFLAGS) -c $(SRC_C)
-
-	@ make -C libft all
+%.o: %.c
+	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
-	@ $(RM) $(OBJ_C) $(OBJ_S) $(LIBFT_DIR)/*.o
+	$(RM) $(OBJ_S) $(OBJ_C)
+	make -C libft/ clean
 
 fclean: clean
-	@ $(RM) $(CLIENT) $(SERVER) $(LIBFT_DIR)/$(LIBFT)
+	$(RM) $(NAME_S) $(NAME_C)
+	make -C libft/ fclean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all libft clean fclean re
+
