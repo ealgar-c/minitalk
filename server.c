@@ -10,7 +10,7 @@ void	action(int sigsent)
 	i++;
 	if (i == 8)
 	{
-		ft_printf("%c\n", buff);
+		ft_printf("%c", buff);
 		i = 0;
 		buff = 0;
 	}
