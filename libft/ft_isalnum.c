@@ -6,11 +6,12 @@
 /*   By: ealgar-c <ealgar-c@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 15:40:58 by ealgar-c          #+#    #+#             */
-/*   Updated: 2023/05/11 17:13:49 by ealgar-c         ###   ########.fr       */
+/*   Updated: 2023/05/20 21:07:26 by ealgar-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 int	ft_isalnum(int c)
 {
 	if (ft_isalpha(c) || ft_isdigit(c))

@@ -6,11 +6,12 @@
 /*   By: ealgar-c <ealgar-c@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 12:49:53 by ealgar-c          #+#    #+#             */
-/*   Updated: 2023/05/11 17:13:49 by ealgar-c         ###   ########.fr       */
+/*   Updated: 2023/05/20 21:09:01 by ealgar-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 char	*ft_strrchr(const char *s, int c)
 {
 	int	i;

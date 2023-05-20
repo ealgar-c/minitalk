@@ -6,12 +6,13 @@
 /*   By: ealgar-c <ealgar-c@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 20:55:24 by ealgar-c          #+#    #+#             */
-/*   Updated: 2023/05/11 17:13:49 by ealgar-c         ###   ########.fr       */
+/*   Updated: 2023/05/20 21:08:49 by ealgar-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
+
 size_t	ft_strlcat(char *dest, char *src, size_t size)
 {
 	size_t	a;

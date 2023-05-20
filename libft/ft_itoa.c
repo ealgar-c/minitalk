@@ -6,12 +6,13 @@
 /*   By: ealgar-c <ealgar-c@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 16:37:42 by ealgar-c          #+#    #+#             */
-/*   Updated: 2023/05/11 17:13:49 by ealgar-c         ###   ########.fr       */
+/*   Updated: 2023/05/20 21:07:35 by ealgar-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
+
 static int	ft_dcount(long int n)
 {
 	int	i;
