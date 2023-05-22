@@ -64,17 +64,16 @@ CFLAGS = -Wall -Werror -Wextra
 LIB = ar rcs
 
 all: $(NAME)
-
 $(NAME): $(OBJ)
-	$(LIB) $(NAME) $(OBJ)
+	@ $(LIB) $(NAME) $(OBJ)
 
 $(OBJ): $(SOURCE)
-	$(CC) $(CFLAGS) -c $(SOURCE)
+	@ $(CC) $(CFLAGS) -c $(SOURCE)
 clean:
-	rm -rf $(OBJ)
+	@ rm -rf $(OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	@ rm -f $(NAME)
 
 re: fclean all
 
