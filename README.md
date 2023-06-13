@@ -10,7 +10,7 @@
 
 <h2 align="center">📜 PROYECT DESCRIPTION 📜</h2>
 
-Aqui va una descripción del proyecto más extensa
+Este proyecto tiene como objetivo principal la implementación de un sistema de comunicación entre un cliente y un servidor utilizando exclusivamente señales UNIX. Este proyecto busca brindar una comprensión profunda de las señales y cómo se pueden utilizar para establecer una comunicación básica entre procesos.
 
 <h2 align="center">🌲 PROYECT TREE 🌲</h2>
 
