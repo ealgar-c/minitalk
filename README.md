@@ -56,3 +56,19 @@ Este proyecto tiene como objetivo principal la implementación de un sistema de 
 *  Create the Makefile that creates both of the executables
 
 <h2 align="center">⚙️ PROYECT GENERAL PROCEDURE ⚙️</h2>
+
+<h3 align="center"> client.c explanation </h3>
+
+The client receives via arguments the PID of the server and the string we have to send to the server. After that the client send each character to a function and that function sends 8 signals, one for each bit of the character. It starts from the MSB to the LSB passing it to the LSB and sending SIGUSR1 or SIGUSR2 depending on if the number is now even or odd.
+
+<h3 align="center"> server.c explanation </h3>
+
+The server prints in the terminal de PID, then we set the actions that are going to occur whe we receive a signal using the signal() function, After that we just wait until the client sends us the signal. When a signal is recived, we have to manage it correctly, the best option to do that is having a static octet and a static iterator, so when we get to 8 iterations (what means the octet we were receiving is formed) we print it and empty everyting.
+
+<h3 align="center"> client_bonus.c explanation </h3>
+
+While the rest of the code is the same as the client.c, now we have incremented the usleep() so that we have time to receive a signal and handle it. The confirmation_handler function is called when a signal is received. It prints "0" if the signal is SIGUSR2, and "1" if the signal is SIGUSR1. So tha tthe client now print the sent message in binary.
+
+<h3 align="center"> server_bonus.c explanation </h3>
+
+While the rest of the code is the same as the server.c, we are now using a sigaction structure to handle the signals, we are doing that because is the easiest way to get the ID of the client so that we can send a confirmation signal, after declaring the structur we have to configure it correctly, setting up the function we are going to use to handle signals, emptying the mask so that any signal is ignored and adding the SIGINFO flag to the structure in order to receive the PID of the client, after that, pretty much everything is the same except for that, after handling the signal, we send a signal back. 
