@@ -28,23 +28,23 @@ Este proyecto tiene como objetivo principal la implementación de un sistema de 
 
 <h2 align="center">🚶🏻‍♂️ PROYECT ROADMAP 🚶</h2>
 
-<h3 align="center"> [descriptive emoji] UNIX SIGNAL HANDLING</h3>
+<h3 align="center"> 🚨 UNIX SIGNAL HANDLING</h3>
 
 *  understand what are unix signal and how they works
 *  understand the functions of signal.h
 *  Understand binary operators
 
-<h3 align="center"> [descriptive emoji] CLIENT MANAGEMENT</h3>
+<h3 align="center"> 🗣 CLIENT MANAGEMENT</h3>
 
 *  Learn how to send signals from a C program
 *  Search how to send characters using only UNIX signals
 *  Get the right configuration of usleep() to stop the program but not a lot of time
 
-<h3 align="center"> [descriptive emoji] SERVER MANAGEMENT</h3>
+<h3 align="center"> 👂 SERVER MANAGEMENT</h3>
 
 *  Implement the use of static variables for each received signal
 
-<h3 align="center">🥬 BONUS PART</h3>
+<h3 align="center">➕ BONUS PART</h3>
 
 *  Use a sigaction struct and set it up correctly
 *  Send signals from the server to the client
